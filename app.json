@@ -1,4 +1,5 @@
 {
   "name": "TodoApp",
-  "slug": "TodoApp"
+  "slug": "TodoApp",
+  "newArchEnabled": true
 }
