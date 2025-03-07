@@ -14,6 +14,9 @@ const App: React.FC = () => {
   const store = useCreateStore(createStore);
   useAndStartPersister(store);
 
+  const allList = store.getTable("todo");
+  console.log("allList", JSON.stringify(allList, null, 2));
+
   return (
     <Provider store={store}>
       <SafeAreaProvider>

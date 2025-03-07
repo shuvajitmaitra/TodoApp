@@ -23,7 +23,6 @@ const Todo: React.FC<TodoProps> = ({ id }) => {
   const row = (useRow(TODO_TABLE, id) as unknown as TodoRow | undefined) || { [TEXT_CELL]: "", [DONE_CELL]: false };
   const { [TEXT_CELL]: text, [DONE_CELL]: done } = row;
   const handlePress = useSetCellCallback(TODO_TABLE, id, DONE_CELL, () => (prev: boolean) => !prev);
-
   return (
     <TouchableOpacity onPress={handlePress} style={[styles.todo, done ? styles.done : null]}>
       <Text style={styles.todoText}>
